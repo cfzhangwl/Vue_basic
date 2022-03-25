@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>事件处理</title>
+  <script src="../js/vue@2.6.14.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <h2>欢迎来到{{school}}学习</h2>
+    <button @click="print1">点我显示信息1</button>
+    <br />
+    <br />
+    <button @click="print2('bb')">点我显示信息2</button>
+  </div>
+
+  <script>
+    const vm = new Vue({
+      el: "#root",
+      data: {
+        school: "尚硅谷",
+      },
+      methods: {
+        print1(event) {
+          console.log('点我打印信息1', event);
+        },
+        print2(a) {
+          console.log(a);
+        }
+      },
+    });
+  </script>
+</body>
+
+</html>

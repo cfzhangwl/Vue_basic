@@ -2,14 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
+    <title>初识Vue</title>
+    <script src="../js/vue@2.6.14.js"></script> 
 </head>
 
-<body>  
+<body>
 
+    <!-- 准备好一个容器 -->
+    <div id="root">
+        <h1>Hello,{{school}}</h1>
+    </div>
+    <script>
+        // 创建一个Vue的实例对象，并传入配置对象
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                school: '尚硅谷'
+            }
+        });
+    </script>
 </body>
- 
+
 </html>
